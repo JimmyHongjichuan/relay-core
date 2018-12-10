@@ -1,20 +1,37 @@
-package: dgateway
+package: github.com/ofgp/ofgp-core
 import:
-- package: github.com/cpacia/bchutil
-  version: 12e86f41eb040d3b85b5d8e3a3a4bed035517c52
+- package: eosc/eoswatcher
+- package: github.com/btcsuite/btcd
+  subpackages:
+  - btcec
+  - txscript
+  - wire
+- package: github.com/eoscanada/eos-go
+  version: ^3.0.0
+  subpackages:
+  - ecc
+  - token
+- package: github.com/fsnotify/fsnotify
+  version: ^1.4.7
 - package: github.com/golang/protobuf
+  version: ^1.2.0
   subpackages:
   - proto
-- package: github.com/gomodule/redigo
-  subpackages:
-  - redis
 - package: github.com/inconshreveable/log15
+  version: ^2.14.0
 - package: github.com/julienschmidt/httprouter
-- package: github.com/olivere/elastic
-- package: github.com/pebbe/zmq4
-- package: github.com/pkg/errors
+  version: ^1.2.0
+- package: github.com/ofgp/bitcoinWatcher
+  version: ^1.0.1
+  subpackages:
+  - coinmanager
+  - mortgagewatcher
+- package: github.com/ofgp/ethwatcher
 - package: github.com/rcrowley/go-metrics
 - package: github.com/rs/cors
+  version: ^1.6.0
+- package: github.com/spf13/viper
+  version: ^1.3.1
 - package: github.com/syndtr/goleveldb
   subpackages:
   - leveldb
@@ -24,21 +41,13 @@ import:
   - leveldb/opt
   - leveldb/util
 - package: github.com/vrischmann/go-metrics-influxdb
-- package: golang.org/x/net/context
+- package: golang.org/x/net
+  subpackages:
+  - context
 - package: google.golang.org/grpc
+  version: ^1.17.0
   subpackages:
   - connectivity
-- package: gopkg.in/mgo.v2
+  - keepalive
 - package: gopkg.in/urfave/cli.v1
-ignore:
-- bitcoinWatcher/coinmanager
-- bitcoinWatcher/coinstore
-- bitcoinWatcher/conf
-- bitcoinWatcher/dbop
-- bitcoinWatcher/mortgagewatcher
-- bitcoinWatcher/util
-- ethWatcher
-- github.com/btcsuite/btcd
-- github.com/btcsuite/btcutil
-- github.com/ethereum/go-ethereum
-- github.com/spf13/viper
+  version: ^1.20.0
