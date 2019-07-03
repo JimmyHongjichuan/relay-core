@@ -7,3 +7,4 @@ nonceStore
 *.prof
 vendor
 *.swp
+.idea

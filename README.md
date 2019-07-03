@@ -1,12 +1,3 @@
-# ofgp-core
-实现网关的底层逻辑。具体描述见Wiki
-# Install
-下载源码：
-
-`go get github.com/ofgp/ofgp-core`
-或者
-`git clone https://github.com/ofgp/ofgp-core.git`
-
 运行：
 `go run server.go --config config.toml`
 
